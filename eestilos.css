@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');/*version actual sin efecto*/
+/*estilo de google con efecto se utiliza css viejo cambios look video udemy*/
+@import url('https://fonts.googleapis.com/css?family=Rubik+Moonrocks|Sofia&effect=shadow-multiple&display=swap');
+
+
+* {
+  border: 10px;
+}
+a {
+  color: white;
+  background-color: blueviolet;
+}
+.centro_titulo {
+  text-align: center;
+  border: 1px;
+}
+.borde_punteado {
+  border-style: dotted;
+}
+.borde_discontinuo {
+  border-style: dashed;
+}
+.borde_solido {
+  border-style: solid;
+}
+.borde_doble {
+  border-style: double;
+}
+.borde_surco {
+  border-style: groove;
+}
+.borde_cresta {
+  border-style: ridge;
+}
+.borde_recuadro {
+  border-style: inset;
+}
+.borde_outset {
+  border-style: outset;
+}
+/*border-style: superior derecho inferior izquierdo*/
+.borde_mixto {
+  border-style: dotted solid dashed groove;
+}
+.borde_anchura {
+  border-style: dotted solid dashed groove;
+  border-width: 10px 5px 3px 2px;
+}
+.borde_color {
+  border-style: dotted;
+  border-color: crimson blue gold lime;
+}
+.borde_redondo{
+    border-style: solid;
+    /*borde-radius:superiorizquierda superiorderecha  inferior derecha inferiorizquierda */
+    border-radius: 20px 0px 10px 0px;/* sis se aplican dos seria: superioinferiro izquierdadercha*/
+    border-color: crimson blue gold lime
+}
+
+.box_outline{
+    padding: 10px;
+    border: 15px solid lime;
+    margin: 20px;
+    width: 300px;/*solo a mi contenido*/
+    outline: 10px solid red;/*outline lo conforma el margin */
+}
+.box_out_offf{
+    padding: 10px;
+    border: 15px solid lime;
+    margin: 20px;
+    width: 300px;/*solo a mi contenido, con max-width y max-hight : hacen el maximo que se va a minimizar*/
+    outline: 10px solid red;/*outline lo conforma el margin */
+    outline-offset: 10px;
+}
+.box_out_offf_centrado{
+    padding: 10px;
+    border: 15px solid lime;
+    margin: auto;
+    width: 300px;/*solo a mi contenido, con max-width y max-hight : hacen el maximo que se va a minimizar*/
+    outline: 10px solid red;/*outline lo conforma el margin */
+    outline-offset: 10px;
+}
+/*Fondo con imagen */
+body{
+  background-image: url("fondo.png");
+  background-repeat:repeat;
+}
+.texto{
+  text-align: justify;
+  /*text-ident : deja espacio al inicio*/
+  text-indent: 30px;
+  line-height: 1.2;/* espacion entre lineas */
+  text-shadow: 1px 1px 2px 0px;
+}
+.caja{
+  padding: 5px;
+  width: 40%;
+  height: 80px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  margin: 10px;
+  font-size: 20px;
+  float: left;
+}
+.caja.serif{
+  background-color: blueviolet;
+}
+.fuente_times{
+  font-family: 'Times New Roman', Times, serif;
+}
+.fuente_georgia{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+.caja.sans-serif{
+  background-color: #00b4d8;
+}
+.fuente_arial{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.fuente_verdana{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.caja.monospace{
+  background-color: rosybrown;
+}
+.fuente_courier{
+  font-family: 'Courier New', Courier, monospace;
+}
+.fuente_lucida{
+  font-family: 'Lucida Handwriting',cursive;
+}
+.fuente_google{
+  /*en import de google sale*/
+  font-family:'Sofia', cursive; ;
+  font-size: 30px;
+}
+.fuente_todo_resumido{
+  font: italic small-caps bolder 20px Robot,sans-seri;
+  /* font: font-style font-variant font-weight font-size/line-height *font-family */
+}
+
+/*POSICIONAMIENTO DE DIV*/
+.div_centrado{/*por defecto position:esta en static*/
+  max-width: 50%;/*par que cuando se disminuya la pantalla siga siendo de 50%*/
+  border: 3px solid firebrick;
+  margin: auto;/*centrado*/
+  font-size: 30px;
+}
+.div_relative{/*por defecto position:esta en static*/
+  position: relative;
+  left: 160px;/*de la izquierda*/
+  top: 3px;/*de arriba*/
+
+  max-width: 50%;/*par que cuando se disminuya la pantalla siga siendo de 50%*/
+  border: 3px solid firebrick;
+  margin: auto;/*centrado*/
+  font-size: 30px;
+}
+.div_fixed{/*por defecto position:esta en static*/
+  position: fixed;/*es de toda la pantalla no de  la linea*/
+  left: 160px;/*de la izquierda*/
+  top: 0;/*de arriba*/
+
+  border: 3px solid firebrick;
+  font-size: 30px;
+}
+.div_absoluta{/*por defecto position:esta en static*/
+  position: absolute;/*es de toda la pantalla no de  la linea pero no sigue*/
+  right: 0;/*de la derecha*/
+  top: 0;/*de arriba*/
+  /*bottom: 0 ; es para abajo*/
+  border: 3px solid firebrick;
+  font-size: 30px;
+}
+.div_sticky{/*por defecto position:esta en static*/
+  position: sticky;/*comienza como static y cambia a fixed*/
+  position: -webkit-sticky;/*para safari*/
+  left: 0;/*de la derecha*/
+  top: 0;/*de arriba*/
+
+  border: 3px solid firebrick;
+  font-size: 30px;
+}
+.div_c{
+  position: static;
+  padding: 15px;
+  border: 3px solid greenyellow;
+  background-color: whitesmoke;
+}
+.div_ar{
+  position: relative;
+  top: -15px;
+  left: 10px;
+ padding:15px ;
+ border: 3px solid blueviolet;
+ background-color: darkcyan;
+ z-index: -1;/* -1 = es por detras   ;1 = es por delante  */
+}
+/*iIMAGEN CON DIV*/
+
+div.contenedor{
+  position: relative;
+  border: 3px dashed greenyellow;
+  width: 30%;
+  margin: auto;
+}
+.imagen{
+  width: 100%;
+  opacity: 0.2;
+}
+div.imagen_text{
+  position: absolute;
+  top: 50%;
+  border: 1px solid blue;
+  width: 100%;
+  text-align: center;
+}
+div.scrolll{
+  border: 3px dashed greenyellow;
+  margin: auto;
+  width: 30%;
+  height: 100px;
+  overflow: scroll; /* overflow: hidden : oculta lo que sale del div*/
+   /* overflow: auto : es un scroll pero cuando se necesite*/
+}
+
+/*float en css*/
+div.contenedorr{
+  position: relative;
+  border: 3px dashed greenyellow;
+  width: 30%;
+  float: left;
+}
